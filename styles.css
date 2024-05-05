@@ -1,0 +1,30 @@
+/* Main content styles */
+main {
+    padding-top: 20px;
+    padding-left: 350px;
+    padding-right: 350px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff;
+    background-image: url(assets/dark-background-abstract-background-network-3d-background-7680x4320-8324.png); background-size: cover; background-position: center;
+}
+
+.footer{
+    margin-top: auto;
+}
+
+#left-container{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#right-container{
+    float: right;
+    width: 50%;
+    height: 100%;
+}
