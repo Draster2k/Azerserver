@@ -1,8 +1,8 @@
 /* Main content styles */
 main {
-    padding-top: 20px;
-    padding-left: 350px;
-    padding-right: 350px;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 body{
@@ -11,6 +11,18 @@ body{
     min-height: 100vh;
     color: #ffffff;
     background-image: url(assets/dark-background-abstract-background-network-3d-background-7680x4320-8324.png); background-size: cover; background-position: center;
+
+    font-size: 16px;
+}
+
+h1.display-1 {
+    font-size: 24;
+}
+
+@media only screen and (max-width:600px){
+    body{
+        font-size: 14px;
+    }
 }
 
 .footer{
