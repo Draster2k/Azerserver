@@ -186,12 +186,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         event.preventDefault();
 
         const targetId = this.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
 
-        if (targetElement) {
-          targetElement.scrollIntoView({
+        if (targetId === "#") {
+          // Scroll to the top of the page
+          window.scrollTo({
+            top: 0,
             behavior: "smooth"
           });
+        } else {
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth"
+            });
+          }
         }
       });
     }
