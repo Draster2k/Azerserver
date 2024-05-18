@@ -23,7 +23,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="/assets/Azer Logo-2 White.png" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -178,32 +178,24 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-    // Select all links with hashes
+    // Smooth scroll functionality for all links with hash fragments
     const links = document.querySelectorAll('a[href^="#"]');
-
-    for (const link of links) {
+    links.forEach((link) => {
       link.addEventListener("click", function(event) {
         event.preventDefault();
 
-        const targetId = this.getAttribute("href");
-
-        if (targetId === "#") {
-          // Scroll to the top of the page
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
           window.scrollTo({
-            top: 0,
+            top: targetElement.offsetTop,
             behavior: "smooth"
           });
-        } else {
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: "smooth"
-            });
-          }
+        } else if (targetId === "") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }
       });
-    }
+    });
   });
 </script>
 
