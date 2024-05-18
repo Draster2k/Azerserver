@@ -1,66 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AzerServer - Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="assets/fivcon.ico" type="image/x-icon">
-</head>
-<body>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="assets/Azer Logo-2 White.png" width="50" height="50" alt="AzerServer Logo">AzerServer</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html" id="home-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html" id="about-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html" id="projects-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html" id="contact-link">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/assets/Azer Logo-2 White.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
 
-        <h1 class="display-1 text-center">Welcome to My Portfolio</h1>
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
 
-    <main>
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Azer Adham.</h1>
+    <p>Computer Engineer.</p>
+    <img src="/assets/me_glasses_bg.jpg" alt="boy" class="w3-image" width="992" height="1108">
+  </header>
 
-        <div id="left-container">
-            <div class="text-center">
-                <img src="assets/bbme.jpg" class="rounded img-fluid" height="400" width="550" alt="Me">
-            </div>
-            <p style="padding-top: 20px;">I was born on May 29, 2000, in Amman, Jordan. In 2021, I relocated to Duzce, Turkey, to pursue my university education.</p>
-            <a href="about.html" class="btn btn-outline-light">Learn More About Me</a>
-        </div>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Azer Adham</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>I am a graduate of Jameel-Shaker High School and am currently pursuing a Bachelor's degree in Computer Engineering at the University of Duzce, I have harbored a passion for technology since my childhood, and that enthusiasm has only intensified, particularly with the advent of the internet. The exploration of Google's vast resources and the boundless information it offers has been a transformative experience for me, solidifying my deep interest in the field,
+      i am a self tought 3D artist, i mainly use Blender for designing and rendering.<br>Due to my fervent love and passion for technology, I have acquired proficiency in several programming languages, including:
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Python</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div>
+    <p class="w3-wide">HTML</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:90%"></div>
+    </div>
+    <p class="w3-wide">CSS</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">JavaScript</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">C#</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
+    </div>
+    <p class="w3-wide">SQL</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:92%"></div>
+    </div>
+    <p class="w3-wide">Photoshop</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:86%"></div>
+    </div><br>
+    
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 w3-text-light-grey">My Projects</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Portainer</li>
+          <li class="w3-padding-16">Home Server</li>
+          <li class="w3-padding-16">Docker Container Controller</li>
+          <li class="w3-padding-16">500GB Storage</li>
+          <li class="w3-light-grey w3-padding-24">
+            <a href="https://azerserver.duckdns.org:9443" class="w3-button w3-white w3-padding-large w3-hover-black" target="_blank">Portainer</a>
+          </li>
+        </ul>
+      </div>
 
-        <div id="right-container">
-            <div class="text-center">
-                <img src="assets/me_glasses.JPG" class="rounded img-fluid" height="400" width="550" alt="White_Diamond_Ring_Render">
-            </div>
-            <p style="padding-top: 20px;">Feel free to reach out<br>Via mail or my social media.</p> 
-            <a href="contact.html" class="btn btn-outline-light">Contact Me</a>
-        </div>
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">PhotoPrism</li>
+          <li class="w3-padding-16">Home Server</li>
+          <li class="w3-padding-16">Photo Sync</li>
+          <li class="w3-padding-16">500GB Storage</li>
+          <li class="w3-light-grey w3-padding-24">
+            <a href="http://azerserver.duckdns.org:2342" class="w3-button w3-white w3-padding-large w3-hover-black" target="_blank">PhotoPrism</a>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My 3D Work</h2>
+    <hr style="width:200px" class="w3-opacity">
 
-    </main>
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="/assets/65_Mustang_V01.png" style="width:100%">
+        <img src="/assets/Donut_Coffee_Basic_render_With _Background_4K.png" style="width:100%">
+        <img src="/assets/EarthV05.png" style="width:100%">
+      </div>
 
-    <footer class="footer">
-        <p class="text-center">&copy; 2024 AzerServer. All rights reserved.</p>
-    </footer>
+      <div class="w3-half">
+        <img src="/assets/Hooka_Room.png" style="width:100%">
+        <img src="/assets/Living_Room_RenderV003.png" style="width:100%">
+        <img src="/assets/White_Diamond_Ring.png" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="aspect_ratio.js"></script>
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Duzce, Turkiye</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +90 552 798 94 40</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: azaradham2k@gmail.com</p>
+    </div><br>
+
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <a href="https://www.facebook.com/profile.php?id=100003548570752" class="fa fa-facebook-official w3-hover-opacity" target="_blank"></a>
+    <a href="https://www.instagram.com/azer.shazi/" class="fa fa-instagram w3-hover-opacity" target="_blank"></a>
+    <a href="https://x.com/AzerAdham2K" class="fa fa-twitter w3-hover-opacity" target="_blank"></a>
+    <a href="https://www.linkedin.com/in/azer-adham-5454411a4/" class="fa fa-linkedin w3-hover-opacity" target="_blank"></a>
+    <p class="w3-medium">&copy; 2024 AzerServer. All rights reserved.</p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select all links with hashes
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    for (const link of links) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth"
+          });
+        }
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
