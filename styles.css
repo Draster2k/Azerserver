@@ -289,6 +289,20 @@ https://templatemo.com/tm-597-neural-glass
     font-size: 0.8em;
     vertical-align: super;
 }
+.nav-logo {
+  height: 28px;         /* adjust for balance */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
  @keyframes borderGlow {
      0% {
          background-position: 0% 50%;
@@ -949,8 +963,6 @@ https://templatemo.com/tm-597-neural-glass
   margin: 0 auto;
 }
 
-
-
 .project-section h2 {
   margin-top: 0;
   margin-bottom: 12px;
@@ -959,7 +971,35 @@ https://templatemo.com/tm-597-neural-glass
   border-bottom: 1px solid rgba(0, 200, 255, 0.15);
   padding-bottom: 6px;
 }
+/* Prevent overflow in project details (TRCC & EGO formulas/results) */
+.project-section {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
 
+.project-section pre,
+.project-section code {
+  white-space: pre-wrap;    /* allow wrapping inside code blocks */
+  word-break: break-word;
+  overflow-x: auto;         /* horizontal scroll only if really needed */
+  display: block;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* Fix for equations/results lines (TRCC & EGO) */
+.project-section .results-equation {
+  display: block;
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;   /* allow wrapping on mobile */
+}
 
 /* Section 4: Enhanced Timeline */
  .timeline {
