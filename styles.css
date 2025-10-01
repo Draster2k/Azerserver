@@ -399,6 +399,19 @@ https://templatemo.com/tm-597-neural-glass
     flex-direction: column;
     text-align: center;
     min-height: 100vh;
+    padding: 80px 20px;
+}
+.hero-photo {
+    order: -1;                /* forces the image to appear before text */
+    margin-bottom: 20px;
+}
+
+.hero-photo img {
+    width: 180px;             /* scale down for phones */
+    height: auto;
+    border-radius: 50%;       /* keep circular look */
+    border: 3px solid #22D3EE;
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
 }
 
 .hero-photo img {
