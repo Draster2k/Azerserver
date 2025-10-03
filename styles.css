@@ -25,6 +25,7 @@ https://templatemo.com/tm-597-neural-glass
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
 }
+
 /* Enhanced background colors - Purple/Pink/Green palette */
  .neural-background {
   /* ... keep your positioning/z-index rules ... */
@@ -405,6 +406,10 @@ https://templatemo.com/tm-597-neural-glass
      box-shadow: 0 0 20px rgba(165, 243, 252, 0.3);
      transform: translateY(-2px);
 }
+section {
+  scroll-margin-top: 120px; /* matches header height + spacing */
+}
+
 /* Section 1: Modern Redesigned Hero */
  .hero {
     display: flex;
@@ -413,28 +418,22 @@ https://templatemo.com/tm-597-neural-glass
     flex-direction: column;
     text-align: center;
     min-height: 100vh;
-    padding: 80px 20px;
+    padding: 140px 20px 80px;
 }
-.hero-photo {
-    order: -1;                /* forces the image to appear before text */
-    margin-bottom: 20px;
-}
-
 .hero-photo img {
-    width: 180px;             /* scale down for phones */
-    height: auto;
-    border-radius: 50%;       /* keep circular look */
-    border: 3px solid #22D3EE;
-    box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
-}
-
-.hero-photo img {
-    width: 300px;             /* adjust size */
+    width: 300px;                /* desktop size */
     height: 300px;
-    border-radius: 50%;       /* circle photo */
-    object-fit: cover;        /* crop inside circle */
-    margin-bottom: 20px;      /* spacing below image */
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3); /* glowing effect */
+    border-radius: 50%;          /* makes it a circle */
+    object-fit: cover;           /* crop inside the circle */
+    margin-bottom: 20px;
+    border: 3px solid #22D3EE;   /* thin cyan border */
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.6); /* glowing halo */
+}
+@media (max-width: 768px) {
+    .hero-photo img {
+        width: 180px;
+        height: 180px;
+    }
 }
 
  .hero::before {
@@ -682,21 +681,41 @@ https://templatemo.com/tm-597-neural-glass
 }
 /* Section 2: Diagonal Features */
  .features {
-     padding: 150px 0;
-     position: relative;
-     overflow: hidden;
+    padding: 120px 0;            /* less vertical space */
+    position: relative;
+    overflow: hidden;
 }
- .features::before {
-     content: '';
-     position: absolute;
-     top: -50%;
-     left: -50%;
-     width: 200%;
-     height: 200%;
-     background: conic-gradient(from 0deg, transparent, rgba(34, 211, 238, 0.1), transparent);
-     animation: rotate 20s linear infinite;
-     z-index: -1;
+
+.features .feature-content {
+    max-width: 720px;           /* smaller cards */
+    margin: 1rem auto;          /* spacing between */
+    padding: 1rem 1.2rem; 
+    font-size: 0.95rem;         /* smaller text */
+    text-align: center;
 }
+
+.features .feature-icon {
+    font-size: 1.8rem;          /* smaller icon */
+    margin-bottom: 0.5rem;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg, 
+        transparent, 
+        rgba(34, 211, 238, 0.08),  /* slightly lighter so not too heavy */
+        transparent
+    );
+    animation: rotate 25s linear infinite; /* slower rotation */
+    z-index: -1;
+}
+
  @keyframes rotate {
      from {
          transform: rotate(0deg);
@@ -1293,7 +1312,6 @@ https://templatemo.com/tm-597-neural-glass
         gap: 40px;
 		min-height: 720px;
     }
-
     .feature-row:nth-child(even) {
         flex-direction: column;
     }
@@ -1407,7 +1425,7 @@ https://templatemo.com/tm-597-neural-glass
      .section-title {
          margin-bottom: 60px;
     }
-     .features, .showcase, .timeline, .contact {
+     .showcase, .timeline, .contact {
          padding: 80px 0;
     }
      .timeline {
@@ -1420,6 +1438,73 @@ https://templatemo.com/tm-597-neural-glass
      .footer-links a {
          font-size: 0.85rem;
     }
+    .hero img{
+        max-width: 180px;
+        margin-bottom: 20px;
+    }
+    .feature-row {
+        flex-direction: column;
+        gap: 40px;
+		/* min-height: 720px;  REMOVE THIS */
+        min-height: auto;       /* let height adapt to content */
+    }
+    .feature-row:nth-child(even) {
+        flex-direction: column;
+    }
+	.feature-content {
+    	flex: 0;
+	}
+    .feature-visual {
+        height: 250px; /* Adjust the height for mobile view */
+        width: 100%;
+    }
+}
+
+.certifications .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.certifications .hexagon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* <-- ensures leftover items center */
+  gap: 40px; /* same as your Projects */
+}
+
+.certifications .section-subtitle {
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 160px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 12px 35px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.cert-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #00e0ff;
+}
+
+.cert-card p {
+  color: #ccc;
+  font-size: 1rem;
 }
 /* Enhanced scrollbar */
  ::-webkit-scrollbar {
