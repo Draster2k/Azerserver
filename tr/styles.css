@@ -1527,3 +1527,27 @@ section {
     text-decoration: none;
     color: inherit;
 }
+/* CV Button in Contact */
+.cta-button {
+  background: linear-gradient(135deg, #0077ff, #00d4ff);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #005fcc, #00aacc);
+}
+
+/* Footer CV link */
+.footer-download a {
+  color: #00d4ff;
+  font-size: 14px;
+  text-decoration: none;
+}
+.footer-download a:hover {
+  text-decoration: underline;
+}
