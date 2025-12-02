@@ -9,6 +9,9 @@ https://templatemo.com/tm-597-neural-glass
 
 @charset "utf-8";
 /* CSS Document */
+html {
+    overflow-x: hidden;
+}
  * {
      margin: 0;
      padding: 0;
@@ -196,9 +199,8 @@ https://templatemo.com/tm-597-neural-glass
      left: 50%;
      transform: translateX(-50%);
      z-index: 100;
-     width: 96%;
-     max-width: 1200px;
-     padding: 18px 35px;
+     width: min(1200px, calc(100% - 24px));
+     padding: 16px clamp(16px, 3vw, 28px);
      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
      background: rgba(165, 243, 252, 0.08);
      backdrop-filter: blur(25px);
@@ -1161,6 +1163,8 @@ section {
 
 .contact-info {
     padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
     text-align: center;
     border-radius: 20px;
     background: rgba(165, 243, 252, 0.08);
