@@ -27,9 +27,6 @@ Azerserver/
 │── CNAME              # Custom domain config
 ```
 
-## 📸 Preview
-![Portfolio Screenshot](assets/preview.png)  
-
 ## 📬 Contact
 - GitHub: [Draster2k](https://github.com/Draster2k)  
 - LinkedIn: [Azar Adham](https://linkedin.com/in/azaradham)  
