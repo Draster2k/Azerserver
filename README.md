@@ -29,9 +29,8 @@ Azerserver/
 
 ## 📬 Contact
 - GitHub: [Draster2k](https://github.com/Draster2k)  
-- LinkedIn: [Azar Adham](https://linkedin.com/in/azaradham)  
-- Twitter/X: [@azaradham](https://twitter.com/azaradham)  
-- Instagram: [@azaradham](https://instagram.com/azaradham)  
+- LinkedIn: [Azar Adham](https://linkedin.com/in/azar-adham-5454411a4/)
+- Instagram: [@azer.shazi](https://instagram.com/azer.shazi/)  
 
 ---
 © 2025 Azar Adham. All rights reserved.  
