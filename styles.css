@@ -1113,49 +1113,6 @@ section {
      font-size: 1rem;
 }
 /* Section 5: Contact */
- .contact {
-     padding: 150px 0;
-     position: relative;
-}
-
- .contact-container {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 0 20px;
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 80px;
-     align-items: center;
-}
- .contact-info {
-    padding: 60px 40px;
-    position: relative;
-    overflow: hidden;          /* <- new */
-}
-
-.contact-info::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 160%;               /* was 200% */
-    height: 160%;              /* was 200% */
-    background: radial-gradient(circle, rgba(0, 252, 255, 0.15), transparent 60%);
-    filter: blur(40px);
-    opacity: 0.8;
-    z-index: -1;
-}
- @keyframes pulse {
-     0%, 100% {
-         transform: scale(1);
-         opacity: 0.5;
-    }
-     50% {
-         transform: scale(1.1);
-         opacity: 1;
-    }
-}
-/* Section 5: Contact */
 .contact {
     padding: 150px 0;
     position: relative;
@@ -1177,6 +1134,9 @@ section {
     background: rgba(165, 243, 252, 0.08);
     border: 1px solid rgba(165, 243, 252, 0.15);
     box-shadow: 0 0 25px rgba(34, 211, 238, 0.25);
+
+    position: relative;   /* important */
+    overflow: hidden;     /* clip the glow so it doesn't widen the page */
 }
 
 .contact-info::before {
@@ -1184,9 +1144,11 @@ section {
     position: absolute;
     top: -50%;
     left: -50%;
-    width: 200%;
-    height: 200%;
+    width: 160%;  /* not 200% */
+    height: 160%;
     background: radial-gradient(circle, rgba(34, 211, 238, 0.1), transparent 70%);
+    filter: blur(40px);
+    opacity: 0.8;
     animation: pulse 4s ease-in-out infinite;
     z-index: -1;
 }
@@ -1218,20 +1180,13 @@ section {
     border-radius: 15px;
     background: rgba(165, 243, 252, 0.08);
     border: 1px solid rgba(165, 243, 252, 0.15);
-    color: #ffffff; /* all icons start white */
+    color: #ffffff;
     font-size: 1.5rem;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
-
-.social-links a:hover {
-    color: #22D3EE; /* all icons glow cyan on hover */
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.6);
-    transform: translateY(-5px) scale(1.1);
-}
-
 
 .social-links a::before {
     content: '';
@@ -1249,8 +1204,20 @@ section {
 }
 
 .social-links a:hover {
+    color: #22D3EE;
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
+}
+
+ @keyframes pulse {
+     0%, 100% {
+         transform: scale(1);
+         opacity: 0.5;
+    }
+     50% {
+         transform: scale(1.1);
+         opacity: 1;
+    }
 }
 
 /* Footer */
